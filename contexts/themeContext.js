@@ -19,7 +19,7 @@ export const ThemeProvider = ({ children }) => {
         return storedTheme === "dark";
       }
     }
-    return true; // Fallback to 'light' if localStorage is not available or no stored value found
+    return false; // Fallback to 'light' if localStorage is not available or no stored value found
   };
 
   const [isDarkMode, setIsDarkMode] = useState(getInitialTheme);

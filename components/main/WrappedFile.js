@@ -19,6 +19,7 @@ import GoogleTranslate from "../Translator/GoogleTranslator";
 import LoadingScreen from "./LoadingScreen";
 import { Toaster } from "react-hot-toast";
 import { ThemeProvider, useTheme } from "../../contexts/themeContext";
+import MTUno from "./MetaTrader/MTUno";
 
 export default function WrappedFile() {
   const { isDarkMode, baseColor } = useTheme();
@@ -35,16 +36,17 @@ export default function WrappedFile() {
       <div className="fixed top-0 left-0 w-full text-white z-30 ">
         <Navbar />
       </div>
-      <div className=" w-full relative overflow-hidden">
+      {/* <div className=" w-full relative overflow-hidden">
         <div className="w-full ">
           <Slider />
         </div>
-      </div>
+      </div> */}
 
-      <div className=" w-full relative overflow-hidden">
+      <div className="mt-20 w-full relative overflow-hidden">
         <section className="relative w-full h-auto">
           <TradingView />
         </section>
+        <MTUno />
         <GettingStarted />
         <WhatNRating />
         <AboutUs />

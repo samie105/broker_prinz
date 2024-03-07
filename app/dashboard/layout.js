@@ -55,7 +55,7 @@ export default function Layout({ children }) {
         strategy="afterInteractive"
         async
       ></Script>
-      <GoogleTranslate isDarkMode={isDarkMode} />
+      {/* <GoogleTranslate isDarkMode={isDarkMode} /> */}
       <main
         className={`h-screen overflow-hidden relative /overflow-y-scroll w-screen ${
           isDarkMode ? `${baseColor}` : ""
