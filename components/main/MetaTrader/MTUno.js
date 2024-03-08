@@ -48,7 +48,7 @@ export default function MTUno() {
                 financial technology solutions to empower investors and traders
                 worldwide. Our advanced platforms provide real-time market data,
                 customizable charting tools, and sophisticated trading
-                capabilities to help you stay ahead in today's dynamic financial
+                capabilities to help you stay ahead in todays dynamic financial
                 markets.
                 {/* . Whether you're a seasoned investor or just getting
                 started, our user-friendly interfaces and intuitive features
