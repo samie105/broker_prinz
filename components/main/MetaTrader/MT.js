@@ -12,7 +12,7 @@ export default function MT() {
         <section className="image_section flex w-full h-full items-center justify-center">
           <div className="img_container px-4">
             <Image
-              src="/assets/trade.png"
+              src="/assets/landliner.png"
               alt=""
               width={1000}
               height={1000}

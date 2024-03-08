@@ -331,6 +331,171 @@ export default function Testimonials() {
               </div>
             </div>
           </div>
+          <div className="TestimonyTwo">
+            <div
+              className={`testi-card ${
+                isDarkMode
+                  ? `bg-[#111] text-white border-white/10 border`
+                  : "bg-white shadow-[rgba(50,_50,_105,_0.15)_0px_2px_5px_0px,_rgba(0,_0,_0,_0.05)_0px_1px_1px_0px]"
+              }  p-5 rounded-xl mx-2 my-2`}
+            >
+              <div className="card-brand mb-4">
+                <div className="icon-container flex items-center text-orange-700 font-bold ">
+                  <div className=" mr-2">
+                    <FontAwesomeIcon icon={faReddit} className="w-4 h-4" />
+                  </div>
+                  <p>Reddit</p>
+                </div>
+              </div>
+              <div className="card-body text-sm">
+                <blockquote>
+                  <sup>
+                    <FontAwesomeIcon
+                      icon={faQuoteLeft}
+                      className="w-3 h-3 inline text-gray-300"
+                    />
+                  </sup>{" "}
+                  Sharing this because I have been blessed with your guidance
+                  and technique, you have helped me achieve my dreams at first I
+                  thought it was all lies not until you proved me wrong, more
+                  blessings to you, and I can now take care of the family.{" "}
+                  <sup>
+                    <FontAwesomeIcon
+                      icon={faQuoteRight}
+                      className="w-3 h-3 inline text-gray-300"
+                    />
+                  </sup>
+                </blockquote>
+              </div>
+              <div className="card-author mt-5 flex items-center">
+                <div className="avatar ">
+                  <div className="img-container rounded-full bg-fuchsia-200 w-10 h-10 overflow-hidden">
+                    <Image
+                      height={50}
+                      width={50}
+                      className=""
+                      src="/assets/copy-trader.jpg"
+                      alt=""
+                    />
+                  </div>
+                </div>
+                <div className="av-writeUp ml-5 text-xs font-semibold">
+                  <div className="name mb-1">Karen Phelps</div>
+                  <div className="desc">Trader at Bolinger Noxx</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div className="TestimonyOne">
+            <div
+              className={`testi-card ${
+                isDarkMode
+                  ? `bg-[#111] text-white border-white/10 border`
+                  : "bg-white shadow-[rgba(50,_50,_105,_0.15)_0px_2px_5px_0px,_rgba(0,_0,_0,_0.05)_0px_1px_1px_0px]"
+              }  p-5 rounded-xl mx-2 my-2`}
+            >
+              <div className="card-brand mb-4">
+                <div className="icon-container text-blue-700 flex items-center font-bold ">
+                  <div className=" mr-2">
+                    <FontAwesomeIcon icon={faFacebook} className="w-4 h-4" />
+                  </div>
+                  <p>Facebook</p>
+                </div>
+              </div>
+              <div className="card-body text-sm">
+                <blockquote>
+                  <sup>
+                    <FontAwesomeIcon
+                      icon={faQuoteLeft}
+                      className="w-3 h-3 inline text-gray-300"
+                    />
+                  </sup>{" "}
+                  What a flawless experience, I've had several trade sessions
+                  with CN and all went smoothly and successfully, and now I can
+                  pay those bills not having to work multiple jobs, I highly
+                  recommend this company.{" "}
+                  <sup>
+                    <FontAwesomeIcon
+                      icon={faQuoteRight}
+                      className="w-3 h-3 inline text-gray-300"
+                    />
+                  </sup>
+                </blockquote>
+              </div>
+              <div className="card-author mt-5 flex items-center">
+                <div className="avatar ">
+                  <div className="img-container rounded-full bg-fuchsia-200 w-10 h-10 overflow-hidden">
+                    <Image
+                      height={50}
+                      width={50}
+                      className=""
+                      src="/assets/copy-trader-4.jpg"
+                      alt=""
+                    />
+                  </div>
+                </div>
+                <div className="av-writeUp ml-5 text-xs font-semibold">
+                  <div className="name mb-1">Tony B</div>
+                  <div className="desc">Personal Trader</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div className="TestimonyTwo">
+            <div
+              className={`testi-card ${
+                isDarkMode
+                  ? `bg-[#111] text-white border-white/10 border`
+                  : "bg-white shadow-[rgba(50,_50,_105,_0.15)_0px_2px_5px_0px,_rgba(0,_0,_0,_0.05)_0px_1px_1px_0px]"
+              }  p-5 rounded-xl mx-2 my-2`}
+            >
+              <div className="card-brand mb-4">
+                <div className="icon-container flex items-center text-orange-700 font-bold ">
+                  <div className=" mr-2">
+                    <FontAwesomeIcon icon={faReddit} className="w-4 h-4" />
+                  </div>
+                  <p>Reddit</p>
+                </div>
+              </div>
+              <div className="card-body text-sm">
+                <blockquote>
+                  <sup>
+                    <FontAwesomeIcon
+                      icon={faQuoteLeft}
+                      className="w-3 h-3 inline text-gray-300"
+                    />
+                  </sup>{" "}
+                  This is the third investment I have made with Primestocktrade.
+                  After searching the Internet exhaustively, I have found that
+                  they are the best when it comes to trading, they have the most
+                  excellent service I've ever come across with.{" "}
+                  <sup>
+                    <FontAwesomeIcon
+                      icon={faQuoteRight}
+                      className="w-3 h-3 inline text-gray-300"
+                    />
+                  </sup>
+                </blockquote>
+              </div>
+              <div className="card-author mt-5 flex items-center">
+                <div className="avatar ">
+                  <div className="img-container rounded-full bg-fuchsia-200 w-10 h-10 overflow-hidden">
+                    <Image
+                      height={50}
+                      width={50}
+                      className=""
+                      src="/assets/copy-11.jpg"
+                      alt=""
+                    />
+                  </div>
+                </div>
+                <div className="av-writeUp ml-5 text-xs font-semibold">
+                  <div className="name mb-1">Grats Howard </div>
+                  <div className="desc">Personal Trader</div>
+                </div>
+              </div>
+            </div>
+          </div>
         </Slider>
       </div>
     </>
