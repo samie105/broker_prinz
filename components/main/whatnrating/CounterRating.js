@@ -28,14 +28,14 @@ export default function CounterRating() {
             <div className="icon-cont  flex justify-center items-center ">
               <div
                 className={`p-4 rounded-full  ${
-                  isDarkMode ? "bg-[#0052FF20]" : "bg-[#0052FF10]"
+                  isDarkMode ? "bg-[#79BD4420]" : "bg-[#79BD4410]"
                 }`}
               >
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   viewBox="0 0 24 24"
                   fill="currentColor"
-                  className="w-6 h-6 text-[#0052FF]"
+                  className="w-6 h-6 text-[#79BD44]"
                 >
                   <path
                     fillRule="evenodd"

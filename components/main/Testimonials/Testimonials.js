@@ -161,7 +161,6 @@ export default function Testimonials() {
                 </div>
                 <div className="av-writeUp ml-5 text-xs font-semibold">
                   <div className="name mb-1">Nelly Aran</div>
-                  <div className="desc">Candle Forecasts at Inksquare</div>
                 </div>
               </div>
             </div>
@@ -216,7 +215,6 @@ export default function Testimonials() {
                 </div>
                 <div className="av-writeUp ml-5 text-xs font-semibold">
                   <div className="name mb-1">Da Silva P. Viera</div>
-                  <div className="desc">Indicator Analyst at Voce-Bulls</div>
                 </div>
               </div>
             </div>
@@ -271,7 +269,6 @@ export default function Testimonials() {
                 </div>
                 <div className="av-writeUp ml-5 text-xs font-semibold">
                   <div className="name mb-1">Dimitri Paulo</div>
-                  <div className="desc">Account Manager at Greece Chart'Rs</div>
                 </div>
               </div>
             </div>
@@ -326,7 +323,6 @@ export default function Testimonials() {
                 </div>
                 <div className="av-writeUp ml-5 text-xs font-semibold">
                   <div className="name mb-1">Murat Isik</div>
-                  <div className="desc">Personal Trader</div>
                 </div>
               </div>
             </div>
@@ -381,7 +377,6 @@ export default function Testimonials() {
                 </div>
                 <div className="av-writeUp ml-5 text-xs font-semibold">
                   <div className="name mb-1">Karen Phelps</div>
-                  <div className="desc">Trader at Bolinger Noxx</div>
                 </div>
               </div>
             </div>
@@ -436,7 +431,6 @@ export default function Testimonials() {
                 </div>
                 <div className="av-writeUp ml-5 text-xs font-semibold">
                   <div className="name mb-1">Tony B</div>
-                  <div className="desc">Personal Trader</div>
                 </div>
               </div>
             </div>
@@ -491,7 +485,6 @@ export default function Testimonials() {
                 </div>
                 <div className="av-writeUp ml-5 text-xs font-semibold">
                   <div className="name mb-1">Grats Howard </div>
-                  <div className="desc">Personal Trader</div>
                 </div>
               </div>
             </div>
