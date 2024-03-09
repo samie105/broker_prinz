@@ -218,13 +218,14 @@ export default function InvestmentPlans() {
                 <div className="flex items-center justify-center cursor-pointer z-50">
                   {" "}
                   <div
-                    className={`text-2xl my-1 p-2 font-bold rounded-sm ${
+                    className={`text-x my-1 p-2 font-bold rounded-sm ${
                       isDarkMode ? `  ` : ""
                     }`}
                     style={{ backgroundColor: getColorRed(plan.package) }}
                   >
-                    <sup>$</sup> {plan.price.toLocaleString()}
-                    <span className="text-xs"> / 6mo</span>
+                    <sup>$</sup>
+                    {plan.min.toLocaleString()} ~ <sup>$</sup>
+                    {plan.max.toLocaleString()}
                   </div>
                 </div>
 
@@ -257,7 +258,7 @@ export default function InvestmentPlans() {
                 <div className="button-container flex justify-center">
                   <button
                     onClick={() =>
-                      handlePlanChange(plan.price, index, plan.package)
+                      handlePlanChange(plan.min, index, plan.package)
                     }
                     disabled={details.investmentPackage === plan.package}
                     className={`rounded-full px-7 ${

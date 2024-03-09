@@ -41,11 +41,11 @@ export default function MTUno() {
               #1 Advanced <span className="text-[#79BD44]">Trading</span>{" "}
               Platforms &{" "}
               <span className="text-[#79BD44]">Financial Technology</span>{" "}
-              Powered by <span className="text-[#79BD44]">Capital Nexus</span>
+              Powered by <span className="text-[#79BD44]">ITrustCapital</span>
             </div>
             <div className="content">
               <p className={`text-sm   leading-relaxed`}>
-                Capital Nexus offers cutting-edge trading platforms and
+                ITrustCapital offers cutting-edge trading platforms and
                 financial technology solutions to empower investors and traders
                 worldwide. Our advanced platforms provide real-time market data,
                 customizable charting tools, and sophisticated trading
@@ -54,14 +54,14 @@ export default function MTUno() {
                 {/* . Whether you're a seasoned investor or just getting
                 started, our user-friendly interfaces and intuitive features
                 make it easy to execute trades, analyze market trends, and
-                manage your portfolio with confidence. With Capital Nexus, you
+                manage your portfolio with confidence. With ITrustCapital, you
                 can access a wide range of financial instruments, including
                 stocks, options, futures, forex, and cryptocurrencies, all from
                 one integrated platform. In addition to our state-of-the-art
                 trading technology, we also provide educational resources,
                 market insights, and personalized support to help you make
                 informed investment decisions and achieve your financial goals.
-                Join the Capital Nexus community today and experience the future
+                Join the ITrustCapital community today and experience the future
                 of trading innovation. */}
               </p>
             </div>

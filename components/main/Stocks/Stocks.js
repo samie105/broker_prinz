@@ -28,7 +28,7 @@ text-[#79BD44]"
               >
                 Investment
               </span>{" "}
-              Opportunities with Capital Nexus Versatile{" "}
+              Opportunities with ITrustCapital Versatile{" "}
               <span
                 className="
 text-[#79BD44]"
@@ -45,7 +45,7 @@ text-[#79BD44]"
             >
               Although trading Forex is a key component of our business,Capital
               Nexus also offers a diverse range of CFD trading options. With
-              Capital Nexus, you can engage in CFD trading across various asset
+              ITrustCapital, you can engage in CFD trading across various asset
               classes, including{" "}
               <span
                 className="

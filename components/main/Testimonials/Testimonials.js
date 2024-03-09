@@ -135,7 +135,7 @@ export default function Testimonials() {
                       className="w-3 h-3 inline text-gray-300"
                     />
                   </sup>{" "}
-                  I can't thank Capital Nexus enough for their outstanding
+                  I can't thank ITrustCapital enough for their outstanding
                   service. From the moment I signed up, they have provided
                   exceptional support and guidance. Their platform is intuitive
                   and packed with powerful and experiences
@@ -189,7 +189,7 @@ export default function Testimonials() {
                       className="w-3 h-3 inline text-gray-300"
                     />
                   </sup>{" "}
-                  Choosing Capital Nexus was a game-changer for me. Their
+                  Choosing ITrustCapital was a game-changer for me. Their
                   dedication to customer satisfaction is unmatched. Whenever I
                   have a question or need assistance, their support team is
                   always there to help.{" "}
@@ -243,7 +243,7 @@ export default function Testimonials() {
                       className="w-3 h-3 inline text-gray-300"
                     />
                   </sup>{" "}
-                  Trading with Capital Nexus has been a game-changer for my
+                  Trading with ITrustCapital has been a game-changer for my
                   investment portfolio. Their user-friendly platform and
                   extensive range of financial instruments have allowed me to
                   diversify my trading strategies effectively{" "}
@@ -297,7 +297,7 @@ export default function Testimonials() {
                       className="w-3 h-3 inline text-gray-300"
                     />
                   </sup>{" "}
-                  I have been a loyal client of Capital Nexus for several years,
+                  I have been a loyal client of ITrustCapital for several years,
                   and I have never been disappointed. Their professionalism,
                   reliability, and personalized approach have made them my go-to
                   choice anytime.{" "}
@@ -316,7 +316,7 @@ export default function Testimonials() {
                       height={50}
                       width={50}
                       className=""
-                      src="/assets/dumm.jpg"
+                      src="/assets/copy-trader-2.jpg"
                       alt=""
                     />
                   </div>
