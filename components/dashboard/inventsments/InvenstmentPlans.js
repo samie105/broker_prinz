@@ -55,7 +55,7 @@ export default function InvestmentPlans() {
     setLoadingStates(updatedLoadingStates);
 
     try {
-      if (details.tradingBalance > min) {
+      if (details.tradingBalance >= min) {
         // Make an API request to purchase the plan
         const response = await axios.post("/plan/api", { plan, email, min });
 
