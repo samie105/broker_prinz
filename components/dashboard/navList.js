@@ -158,7 +158,7 @@ export const lists = [
     linkPath: "/dashboard/history",
   },
   {
-    nav: "Subscriptions",
+    nav: "Investments",
     icon: (
       <svg
         xmlns="http://www.w3.org/2000/svg"
@@ -409,7 +409,7 @@ export const navList = [
     linkPath: "/dashboard/stake",
   },
   {
-    nav: "Subscriptions",
+    nav: "Investments",
     icon: (
       <svg
         xmlns="http://www.w3.org/2000/svg"
