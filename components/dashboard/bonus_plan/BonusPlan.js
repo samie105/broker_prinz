@@ -13,7 +13,7 @@ export default function BonusPlan() {
   return (
     <div className="">
       {details !== 0 && (
-        <div className="grid md:grid-cols-2 grid-cols-1 w-full gap-3">
+        <div className="grid md:grid-cols-1 grid-cols-1 w-full gap-3">
           <div
             className={`flex relative overflow-hidden justify-between items-center p-4 rounded-md wfull ${
               isDarkMode
@@ -139,7 +139,7 @@ export default function BonusPlan() {
               </Link>
             </div>
           </div>
-          <div
+          {/* <div
             className={`${
               isDarkMode
                 ? "bg-[#111] border border-white/5 text-white"
@@ -176,7 +176,7 @@ export default function BonusPlan() {
                 </div>
               </div>
             </div>
-          </div>
+          </div> */}
         </div>
       )}
     </div>
