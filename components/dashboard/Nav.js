@@ -739,7 +739,7 @@ export default function Nav() {
                         height={1000}
                       />
 
-                      <p className="pt-2">Subscription</p>
+                      <p className="pt-2">Investments</p>
                     </div>
                   </Link>
                   <Link href="/dashboard/verify" passHref>
