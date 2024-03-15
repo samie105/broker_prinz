@@ -54,6 +54,9 @@ export async function POST(request) {
     tradersCopying: [],
     paidStaking: Date.now(),
     lastButtonClick: Date.now(),
+    profit: 0, // Set new field "profit" to zero
+    totalPackages: 0, // Set new field "totalPackages" to zero
+    activePackages: 0, // Set new field "activePackages" to zero
   });
   try {
     await user.save();

@@ -61,6 +61,9 @@ const userSchema = new mongoose.Schema({
   tradingProgress: Number,
   paidStaking: { type: Date, default: Date.now, required: true },
   lastButtonClick: Date,
+  profit: Number,
+  totalPackages: Number,
+  activePackages: Number,
 });
 
 const UserModel = mongoose.models.User || mongoose.model("User", userSchema);
