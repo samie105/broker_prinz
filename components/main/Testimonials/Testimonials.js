@@ -406,9 +406,9 @@ export default function Testimonials() {
                     />
                   </sup>{" "}
                   What a flawless experience, I've had several trade sessions
-                  with CN and all went smoothly and successfully, and now I can
-                  pay those bills not having to work multiple jobs, I highly
-                  recommend this company.{" "}
+                  with ITrustCapital and all went smoothly and successfully, and
+                  now I can pay those bills not having to work multiple jobs, I
+                  highly recommend this company.{" "}
                   <sup>
                     <FontAwesomeIcon
                       icon={faQuoteRight}
@@ -459,7 +459,7 @@ export default function Testimonials() {
                       className="w-3 h-3 inline text-gray-300"
                     />
                   </sup>{" "}
-                  This is the third investment I have made with Primestocktrade.
+                  This is the third investment I have made with ITrustCapital.
                   After searching the Internet exhaustively, I have found that
                   they are the best when it comes to trading, they have the most
                   excellent service I've ever come across with.{" "}
