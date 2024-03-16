@@ -40,18 +40,18 @@ export default function Nav() {
       image: "/assets/bitcoin.webp",
       address: "0xiohxhihfojdokhijkhnofwefodsdhfodhod",
     },
-    {
-      coinName: "Ethereum",
-      short: "Ethereum",
-      image: "/assets/ethereum.webp",
-      address: "0xiohxhihfojhijkhnowefodsdhfodhod",
-    },
-    {
-      coinName: "Tether USDT",
-      short: "Tether",
-      image: "/assets/Tether.webp",
-      address: "0Xxiohxhihfookhijkhnofwefodsdhfodhod",
-    },
+    // {
+    //   coinName: "Ethereum",
+    //   short: "Ethereum",
+    //   image: "/assets/ethereum.webp",
+    //   address: "0xiohxhihfojhijkhnowefodsdhfodhod",
+    // },
+    // {
+    //   coinName: "Tether USDT",
+    //   short: "Tether",
+    //   image: "/assets/Tether.webp",
+    //   address: "0Xxiohxhihfookhijkhnofwefodsdhfodhod",
+    // },
   ];
   const handleReadNotif = async () => {
     if (!details.isReadNotifications) {
