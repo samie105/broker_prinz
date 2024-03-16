@@ -186,7 +186,7 @@ const ChartMovement = () => {
     <div className="my-4 card rounded-lg shadow[rgba(50,_50,_105,_0.15)_0px_2px_5px_0px,_rgba(0,_0,_0,_0.05)_0px_1px_1px_0px]">
       <div className="p-2">
         <div className="flex my-2 ecn-cont w-full justify-center">
-          <div className=" bg-[conic-gradient(at_top_right,_var(--tw-gradient-stops))] from-red-800 via-red-600 to-orange-500 flex items-center p-3 rounded-lg text-white font-bold text-sm">
+          <div className=" bg-[#79BD44] flex items-center p-3 rounded-lg text-white font-bold text-sm">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 20 20"
