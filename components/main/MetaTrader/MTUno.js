@@ -11,7 +11,7 @@ export default function MTUno() {
     <div id="Home" className={`${isDarkMode ? `${baseColor} text-white` : ""}`}>
       <div className="mt-container grid grid-cols-1 md:grid-cols-1 md:px-10 px-5 py-8 md:py-5">
         <section className="image_section flex w-full h-full items-center justify-center">
-          <div className="img_container px-4">
+          <div className="img_container px-4 md:p-10">
             <Image
               src="/assets/trade.png"
               alt=""
@@ -31,7 +31,7 @@ export default function MTUno() {
             </div>
           </div>
         </section>
-        <section className="text_section md:px-8 px-2 pt-7">
+        <section className="text_section text-center flex justify-center md:px-8 px-2 pt-7">
           <div className="textcontaier">
             <div
               className="maintext text-xl md:text-2xl lg:text-3xl font-bold mb-5"
