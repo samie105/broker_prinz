@@ -65,7 +65,11 @@ export default function MTUno() {
                 of trading innovation. */}
               </p>
             </div>
-            <Link href="/auth" passHref className="flex items-center">
+            <Link
+              href="/auth"
+              passHref
+              className="flex items-center justify-center"
+            >
               <div
                 className="btn ml-2 mt-5 md:mt-12 mb-5 lg:block"
                 data-aos="fade-up"
