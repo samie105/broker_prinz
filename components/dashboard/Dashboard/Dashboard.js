@@ -353,7 +353,7 @@ export default function Dash() {
             </div>
           )}
         </div>{" "}
-        {/* {details === 0 ? (
+        {details === 0 ? (
           <div className="px-3 mt-4">
             {" "}
             <Skeleton
@@ -406,7 +406,7 @@ export default function Dash() {
               </div>
             </div>
           </div>
-        )} */}
+        )}
         {details === 0 ? (
           <div className=" my-2 w-full grid md:grid-cols-2 grid-cols-2 lg:grid-cols-4 gap-4 overflow-hidden rounded-md">
             <Skeleton

@@ -123,7 +123,6 @@ export default function LoadingScreen() {
                 fill="#79BD44"
               />
             </svg>
-            ;
           </div>
         </div>
         <div

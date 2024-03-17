@@ -9,7 +9,7 @@ export default function MTUno() {
 
   return (
     <div id="Home" className={`${isDarkMode ? `${baseColor} text-white` : ""}`}>
-      <div className="mt-container grid grid-cols-1 md:grid-cols-2 md:px-10 px-5 py-8 md:py-5">
+      <div className="mt-container grid grid-cols-1 md:grid-cols-1 md:px-10 px-5 py-8 md:py-5">
         <section className="image_section flex w-full h-full items-center justify-center">
           <div className="img_container px-4">
             <Image

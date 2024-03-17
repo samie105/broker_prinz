@@ -52,7 +52,7 @@ export const lists = [
     linkPath: "/dashboard/livetrades",
   },
   {
-    nav: "Live Markets",
+    nav: "Markets",
     icon: (
       <svg
         xmlns="http://www.w3.org/2000/svg"
@@ -322,7 +322,7 @@ export const navList = [
   //   new: true,
   // },
   {
-    nav: "Live Trade",
+    nav: "Markets",
     icon: (
       <svg
         xmlns="http://www.w3.org/2000/svg"
