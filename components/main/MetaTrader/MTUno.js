@@ -33,11 +33,7 @@ export default function MTUno() {
         </section>
         <section className="text_section text-center flex justify-center md:px-8 px-2 pt-7">
           <div className="textcontaier">
-            <div
-              className="maintext text-xl md:text-2xl lg:text-3xl font-bold mb-5"
-              data-aos="fade-up"
-              data-aos-delay="100"
-            >
+            <div className="maintext text-xl md:text-2xl lg:text-3xl font-bold mb-5">
               #1 Advanced <span className="text-[#79BD44]">Trading</span>{" "}
               Platforms &{" "}
               <span className="text-[#79BD44]">Financial Technology</span>{" "}
@@ -70,10 +66,7 @@ export default function MTUno() {
               passHref
               className="flex items-center justify-center"
             >
-              <div
-                className="btn ml-2 mt-5 md:mt-12 mb-5 lg:block"
-                data-aos="fade-up"
-              >
+              <div className="btn ml-2 mt-5 md:mt-12 mb-5 lg:block">
                 <div className="px-5 py-4 bg-[#79BD44] text-white font-semibold text-sm items-center rounded-xl flex">
                   <p>Create an account</p>
                   <svg
