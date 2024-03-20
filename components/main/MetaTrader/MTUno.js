@@ -9,7 +9,7 @@ export default function MTUno() {
 
   return (
     <div id="Home" className={`${isDarkMode ? `${baseColor} text-white` : ""}`}>
-      <div className="mt-container grid grid-cols-1 md:grid-cols-1 md:px-10 px-5 py-8 md:py-5">
+      <div className="mt-container grid grid-cols-1 md:grid-cols-2 md:px-10 px-5 py-8 md:py-5">
         <section className="image_section flex w-full h-full items-center justify-center">
           <div className="img_container px-4 md:p-10">
             <Image
@@ -31,7 +31,7 @@ export default function MTUno() {
             </div>
           </div>
         </section>
-        <section className="text_section text-center flex justify-center md:px-8 px-2 pt-7">
+        <section className="text_section /text-center flex justify-center md:px-8 px-2 pt-7">
           <div className="textcontaier">
             <div className="maintext text-xl md:text-2xl lg:text-3xl font-bold mb-5">
               #1 Advanced <span className="text-[#79BD44]">Trading</span>{" "}
@@ -61,11 +61,7 @@ export default function MTUno() {
                 of trading innovation. */}
               </p>
             </div>
-            <Link
-              href="/auth"
-              passHref
-              className="flex items-center justify-center"
-            >
+            <Link href="/auth" passHref className="flex items-center ">
               <div className="btn ml-2 mt-5 md:mt-12 mb-5 lg:block">
                 <div className="px-5 py-4 bg-[#79BD44] text-white font-semibold text-sm items-center rounded-xl flex">
                   <p>Create an account</p>

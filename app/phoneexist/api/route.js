@@ -7,11 +7,6 @@ export async function POST(request) {
 
   try {
     const phoneexists = await UserModel.findOne({ phone: phone });
-    console.log(
-      `Phone found in database: ${
-        phoneexists ? phoneexists.phone : "not found"
-      }`
-    );
 
     if (phoneexists) {
       return NextResponse.json({ exists: true }, { status: 200 });
