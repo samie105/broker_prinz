@@ -41,7 +41,7 @@ async function sendVerificationEmail(email, code) {
   });
 
   await transporter.sendMail({
-    from: "ITrustCapital <support@itruscapital.com>",
+    from: "ITrustCapital <support@itruscapitalira.com>",
     to: email,
     subject: "Email Verification",
     text: `Your verification code is: ${code}`,

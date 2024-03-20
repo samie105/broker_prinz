@@ -156,7 +156,10 @@ export default function Footer() {
               </section>
               <section className="icon-section"></section>
             </Link>
-            <div className="email-container px-4 py-2 my-3 /bg-[#ffffff05] rounded-lg hover:bg-[#ffffff10] transition-all cursor-pointer flex  items-center justify-between">
+            <Link
+              href={"mailto:itruscapitalira.com"}
+              className="email-container px-4 py-2 my-3 /bg-[#ffffff05] rounded-lg hover:bg-[#ffffff10] transition-all cursor-pointer flex  items-center justify-between"
+            >
               <section className="email-section flex items-center ">
                 <div className="icon p-3 rounded-full  mr-4 opacity-60">
                   <svg
@@ -179,12 +182,12 @@ export default function Footer() {
                     E-mail Contact
                   </div>
                   <div className="phone text-gray-400 my-1 text-sm">
-                    support@itruscapital.com
+                    support@itruscapitalira.com
                   </div>
                 </div>
               </section>
               <section className="icon-section"></section>
-            </div>
+            </Link>
             <div className="address-container px-4 py-2 my-3 /bg-[#ffffff05] rounded-lg hover:bg-[#ffffff10] transition-all cursor-pointer flex  items-center justify-between">
               <section className="address-section flex items-center ">
                 <div className="icon p-3 rounded-full  mr-4 opacity-60">
@@ -223,7 +226,7 @@ export default function Footer() {
         </div>
       </div>
       <div className="footer-message py-4 flex justify-center text-white/60 bg-[#0a0a0a] text-xs md:text-base">
-        © 2024 itruscapital All Rights Reserved.
+        © 2024 itruscapitalira.com All Rights Reserved.
       </div>
     </>
   );
