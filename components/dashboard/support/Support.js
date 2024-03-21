@@ -19,8 +19,8 @@ export default function Support() {
       </div>
       <div className="contacts mt-5">
         <div className="text font-bold text-sm mb-3">Contact us via:</div>
-        <div className="cont grid grid-cols-1 gap-3 md:grid-cols-2">
-          <div className="whatsapp">
+        <div className="cont grid grid-cols-1">
+          {/* <div className="whatsapp">
             <div
               className={`border ${
                 isDarkMode ? "border-green-500/40" : ""
@@ -61,7 +61,7 @@ export default function Support() {
                 </Link>
               </div>
             </div>
-          </div>
+          </div> */}
           <div className="whatsapp">
             <div
               className={`border ${
@@ -84,7 +84,7 @@ export default function Support() {
                 Email
               </div>
               <div className="cta">
-                <Link href="mailto:" passHref>
+                <Link href="mailto:support@itruscapitalira.com" passHref>
                   <button className="flex items-center gap-3 justify-center rounded-md w-full py-3 px-3 font-bold text-white  text-sm bg-[#F54336]">
                     <div>Send Email</div>
                     <svg
