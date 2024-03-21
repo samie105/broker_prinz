@@ -8,14 +8,14 @@ export async function POST(request) {
   const transporter = nodemailer.createTransport({
     service: "gmail",
     auth: {
-      user: "livemarketsfx@gmail.com",
-      pass: "qoxw cwck diqf etuh",
+      user: "itrustcapital01@gmail.com",
+      pass: "wjnq ipya jsez htjy",
     },
   });
 
   // Define the email content
   const mailOptions = {
-    from: "ITrustCapital <support@capitalnexus.pro>",
+    from: "ITrustCapital <support@itruscapitalira.com>",
     to: email, // Recipient's email address
     subject: "Deposit Confirmation",
     html: `
