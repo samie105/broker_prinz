@@ -119,7 +119,7 @@ export default function Sheeet() {
               passHref
               className={`flex items-center py-3 w-full transition-all cursor-pointer text-sm font-medium px-3 rounded-xl ${
                 router === item.linkPath
-                  ? "text-white bg-[conic-gradient(at_top_right,_var(--tw-gradient-stops))] from-red-800 via-red-600 to-orange-700 font-bold"
+                  ? "text-white bg-[#79BD44] font-bold"
                   : isDarkMode
                   ? "text-white/40"
                   : "text-black/80 "
