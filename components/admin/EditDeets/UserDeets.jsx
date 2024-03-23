@@ -28,8 +28,11 @@ export default function UserDeets({ data }) {
   const [totalLoss, setTotalLoss] = useState("");
   const [lastProfit, setLastProfit] = useState("");
   const [planBonus, setPlanBonus] = useState("");
-  const [tradingProgress, setTradingProgress] = useState("");
+  const [profit, setProfit] = useState("");
+  const [totalPackages, setTotalPackages] = useState("");
+  const [activePackages, setActivePackages] = useState("");
   const [investmentPackage, setInvestmentPackage] = useState("");
+  const [trade, setTrade] = useState("");
   const [loading, isloading] = useState(false);
 
   // State for handling form submission
@@ -61,7 +64,10 @@ export default function UserDeets({ data }) {
         lastProfit,
         investmentPackage,
         planBonus,
-        tradingProgress,
+        profit,
+        totalPackages,
+        activePackages,
+        trade,
       });
       if (response.status === 200) {
         setFormSubmitted(true);
@@ -102,7 +108,10 @@ export default function UserDeets({ data }) {
         setLastProfit(fetchedDetails.lastProfit);
         setPlanBonus(fetchedDetails.planBonus);
         setInvestmentPackage(fetchedDetails.investmentPackage);
-        setTradingProgress(fetchedDetails.tradingProgress);
+        setProfit(fetchedDetails.profit);
+        setActivePackages(fetchedDetails.activePackages);
+        setTotalPackages(fetchedDetails.totalPackages);
+        setTrade(fetchedDetails.trade);
       } catch (err) {
         // Handle any errors that occur during the request
         console.error("Error fetching user details:", err);
@@ -349,6 +358,22 @@ export default function UserDeets({ data }) {
                     className="mt-1 p-2 block w-full border rounded-md shadow-sm focus:ring-red-500 focus:border-red-500 text-sm text-black"
                   />
                 </div>
+                <div className="col-span-2 sm:col-span-1">
+                  <label
+                    htmlFor="totalAssets"
+                    className="block text-sm font-bold text-gray-700"
+                  >
+                    Trade:
+                  </label>
+                  <input
+                    type="text"
+                    id="totalAssets"
+                    value={trade}
+                    onChange={(e) => setTrade(e.target.value)}
+                    placeholder="Enter total assets"
+                    className="mt-1 p-2 block w-full border rounded-md shadow-sm focus:ring-red-500 focus:border-red-500 text-sm text-black"
+                  />
+                </div>
 
                 <div className="col-span-2 sm:col-span-1">
                   <label
@@ -396,6 +421,7 @@ export default function UserDeets({ data }) {
                     onChange={(e) => setInvestmentPackage(e.target.value)}
                     className="mt-1 p-2 block w-full border rounded-md shadow-sm focus:ring-red-500 focus:border-red-500 text-sm text-black"
                   >
+                    <option value="no plan">No Plan</option>
                     <option value="bronze plan">Bronze Plan</option>
                     <option value="silver plan">Silver Plan</option>
                     <option value="gold plan">Gold Plan</option>
@@ -420,22 +446,6 @@ export default function UserDeets({ data }) {
                 </div>
                 <div className="col-span-2 sm:col-span-1">
                   <label
-                    htmlFor="planBonus"
-                    className="block text-sm font-bold text-gray-700"
-                  >
-                    Trading Progress (1 - 100)
-                  </label>
-                  <input
-                    type="text"
-                    id="planBonus"
-                    value={tradingProgress}
-                    onChange={(e) => setTradingProgress(e.target.value)}
-                    placeholder="Enter Trading Progress"
-                    className="mt-1 p-2 block w-full border rounded-md shadow-sm focus:ring-red-500 focus:border-red-500 text-sm text-black"
-                  />
-                </div>
-                <div className="col-span-2 sm:col-span-1">
-                  <label
                     htmlFor="investmentPackage"
                     className="block text-sm font-bold text-gray-700"
                   >
@@ -446,6 +456,54 @@ export default function UserDeets({ data }) {
                     id="investmentPackage"
                     value={lastProfit}
                     onChange={(e) => setLastProfit(e.target.value)}
+                    placeholder="Enter investment package"
+                    className="mt-1 p-2 block w-full border rounded-md shadow-sm focus:ring-red-500 focus:border-red-500 text-sm text-black"
+                  />
+                </div>
+                <div className="col-span-2 sm:col-span-1">
+                  <label
+                    htmlFor="profit"
+                    className="block text-sm font-bold text-gray-700"
+                  >
+                    Profit
+                  </label>
+                  <input
+                    type="text"
+                    id="profit"
+                    value={profit}
+                    onChange={(e) => setProfit(e.target.value)}
+                    placeholder="Enter investment package"
+                    className="mt-1 p-2 block w-full border rounded-md shadow-sm focus:ring-red-500 focus:border-red-500 text-sm text-black"
+                  />
+                </div>
+                <div className="col-span-2 sm:col-span-1">
+                  <label
+                    htmlFor="activePages"
+                    className="block text-sm font-bold text-gray-700"
+                  >
+                    Active Packages
+                  </label>
+                  <input
+                    type="text"
+                    id="activePages"
+                    value={activePackages}
+                    onChange={(e) => setActivePackages(e.target.value)}
+                    placeholder="Enter investment package"
+                    className="mt-1 p-2 block w-full border rounded-md shadow-sm focus:ring-red-500 focus:border-red-500 text-sm text-black"
+                  />
+                </div>
+                <div className="col-span-2 sm:col-span-1">
+                  <label
+                    htmlFor="tp"
+                    className="block text-sm font-bold text-gray-700"
+                  >
+                    Total Packages
+                  </label>
+                  <input
+                    type="text"
+                    id="tp"
+                    value={totalPackages}
+                    onChange={(e) => setTotalPackages(e.target.value)}
                     placeholder="Enter investment package"
                     className="mt-1 p-2 block w-full border rounded-md shadow-sm focus:ring-red-500 focus:border-red-500 text-sm text-black"
                   />

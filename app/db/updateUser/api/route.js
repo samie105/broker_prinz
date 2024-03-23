@@ -21,6 +21,10 @@ export async function POST(request) {
     investmentPackage,
     planBonus,
     tradingProgress,
+    profit,
+    totalPackages,
+    activePackages,
+    trade,
   } = await request.json();
 
   try {
@@ -45,6 +49,10 @@ export async function POST(request) {
         lastProfit,
         planBonus,
         tradingProgress,
+        profit,
+        totalPackages,
+        activePackages,
+        trade,
       },
       { new: true } // Return the updated document
     );
