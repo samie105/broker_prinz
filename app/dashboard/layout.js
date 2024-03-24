@@ -50,11 +50,11 @@ export default function Layout({ children }) {
 
   return (
     <UserDataProvider>
-      <Script
+      {/* <Script
         src="//code.tidio.co/rhs7kacj3lpcw2xqb9o2agrohae1hs8j.js"
         strategy="afterInteractive"
         async
-      ></Script>
+      ></Script> */}
       {/* <GoogleTranslate isDarkMode={isDarkMode} /> */}
       <main
         className={`h-screen overflow-hidden relative /overflow-y-scroll w-screen ${
