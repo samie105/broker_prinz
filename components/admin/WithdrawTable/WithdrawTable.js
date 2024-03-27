@@ -7,6 +7,8 @@ import axios from "axios";
 export default function WithdrawTable({ em }) {
   const email = em.replace("%40", "@");
   const [data, setData] = useState();
+  const [name, setName] = useState();
+  const [method, setMethod] = useState();
 
   useEffect(() => {
     const fetchedDetails = async () => {
@@ -20,6 +22,9 @@ export default function WithdrawTable({ em }) {
           const data = response.data;
           //  console.log(data.withdrawalHistory);
           setData(data.withdrawalHistory);
+          setName(data.name);
+          setMethod(data.withdrawMethod);
+
           // Do something with the data here, e.g., update state or perform other actions
         } else {
           // Handle other status codes or errors here
@@ -63,7 +68,15 @@ export default function WithdrawTable({ em }) {
         </div>
       )}
 
-      {data && <WTTable data={data} setData={setData} email={email} />}
+      {data && (
+        <WTTable
+          data={data}
+          setData={setData}
+          email={email}
+          name={name}
+          method={method}
+        />
+      )}
     </div>
   );
 }

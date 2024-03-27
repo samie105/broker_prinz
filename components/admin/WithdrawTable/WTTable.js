@@ -62,7 +62,7 @@ async function deleteUser(email) {
   }
 }
 
-export default function WTTable({ data, setData, email }) {
+export default function WTTable({ data, setData, email, name, method }) {
   const columns = [
     {
       id: "select",
@@ -197,6 +197,8 @@ export default function WTTable({ data, setData, email }) {
             transactionId,
             newStatus,
             amount,
+            name,
+            method,
           }),
         });
 
