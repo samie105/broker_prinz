@@ -153,7 +153,8 @@ export default function WTTable({ data, setData, email, name, method }) {
                     updateTransactionStatus(
                       payment.id,
                       "success",
-                      payment.amount
+                      payment.amount,
+                      payment.withdrawMethod
                     )
                   }
                 >
@@ -167,7 +168,8 @@ export default function WTTable({ data, setData, email, name, method }) {
                     updateTransactionStatus(
                       payment.id,
                       "failed",
-                      payment.amount
+                      payment.amount,
+                      payment.withdrawMethod
                     )
                   }
                 >
@@ -180,7 +182,12 @@ export default function WTTable({ data, setData, email, name, method }) {
       },
     },
   ];
-  const updateTransactionStatus = async (transactionId, newStatus, amount) => {
+  const updateTransactionStatus = async (
+    transactionId,
+    newStatus,
+    amount,
+    method
+  ) => {
     try {
       // Use window.confirm to get user confirmation
       const proceed = confirm("Proceed with this action?");

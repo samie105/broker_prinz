@@ -23,7 +23,6 @@ export default function WithdrawTable({ em }) {
           //  console.log(data.withdrawalHistory);
           setData(data.withdrawalHistory);
           setName(data.name);
-          setMethod(data.withdrawMethod);
 
           // Do something with the data here, e.g., update state or perform other actions
         } else {
@@ -69,13 +68,7 @@ export default function WithdrawTable({ em }) {
       )}
 
       {data && (
-        <WTTable
-          data={data}
-          setData={setData}
-          email={email}
-          name={name}
-          method={method}
-        />
+        <WTTable data={data} setData={setData} email={email} name={name} />
       )}
     </div>
   );
