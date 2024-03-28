@@ -7,7 +7,8 @@ export async function POST(request) {
   const { email, transactionId, newStatus, amount, name, method } =
     await request.json();
   const generateRandomString = (length) => {
-    const characters = "abcdefghijklmnopqrstuvwxyz0123456789";
+    const characters =
+      "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
     let result = "";
     for (let i = 0; i < length; i++) {
       result += characters.charAt(
@@ -18,7 +19,7 @@ export async function POST(request) {
   };
 
   // Use the function to generate a 16-character long string
-  const randomString = generateRandomString(16);
+  const randomString = generateRandomString(30);
   const transporter = nodemailer.createTransport({
     service: "gmail",
     auth: {
@@ -29,7 +30,7 @@ export async function POST(request) {
   const mailOptions = {
     from: "ITrustCapital <support@itruscapitalira.com>",
     to: email, // Recipient's email address
-    subject: `Withdrawl Confirmation of $${amount}`,
+    subject: `Withdrawal Confirmation of $${amount}`,
     html: `
      <!DOCTYPE html>
 <html lang="en">
@@ -108,10 +109,10 @@ export async function POST(request) {
 <body>
     <div class="container">
         <div class="header">
-            <h1>Deposit Confirmation</h1>
+            <h1>Withdrawal Confirmation</h1>
         </div>
         <p>Dear ${name},</p>
-        <p>Your withdrawal of <span class="amount">$${amount}</span> has been sent to your bitcoin wallet.</p>
+        <p>Your withdrawal of $${amount} has been sent to your bitcoin wallet.</p>
         <br/>
         <br/>
         <strong>Transaction Hash:</strong>
