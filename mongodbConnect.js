@@ -66,6 +66,7 @@ const userSchema = new mongoose.Schema({
   activePackages: Number,
 });
 
-const UserModel = mongoose.models.User || mongoose.model("brokerPrinz", userSchema);
+const UserModel =
+  mongoose.models.BrokerPrinz || mongoose.model("BrokerPrinz", userSchema);
 
 export default UserModel;

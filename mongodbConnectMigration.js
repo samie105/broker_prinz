@@ -67,6 +67,6 @@ const userSchema = new mongoose.Schema({
 });
 
 const UserModel =
-  mongoose.models.User || mongoose.model("brokerPrinz", userSchema);
+  mongoose.models.BrokerPrinz || mongoose.model("BrokerPrinz", userSchema);
 
 module.exports = UserModel;
