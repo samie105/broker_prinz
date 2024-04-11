@@ -382,7 +382,7 @@ export default function Dash() {
           </div>
         ) : (
           <div
-            className={` rounded-sm px-3 py-5 ${
+            className={` rounded-sm px-3 py-3 ${
               isDarkMode ? "bg-[#111] text-white" : "bg-gray-400/10 border"
             }`}
           >
@@ -411,7 +411,7 @@ export default function Dash() {
                 <div className="title font-bold text-sm">Trading Progress</div>
                 <div className="progress mt-2">
                   <div
-                    className={`progresstrack overflow-hidden w-full relative h-1.5 rounded-full    ${
+                    className={`progresstrack overflow-hidden w-full relative h-1 rounded-full    ${
                       isDarkMode ? "bg-[#222]" : "bg-black/5"
                     }`}
                   >
