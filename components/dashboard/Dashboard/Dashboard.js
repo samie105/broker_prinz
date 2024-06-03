@@ -308,16 +308,11 @@ export default function Dash() {
                     </div>
 
                     <div
-                      className={`mt-2 md:mt-0 bg-gay-200 rounded-lg md:ml-2 text-lg md:text-sm text-left  ${
+                      className={`mt-2 md:mt-0 bg-gay-200 rounded-lg md:ml-2 text-lg  text-left  ${
                         isDarkMode ? "text-white" : "text-black"
                       }`}
                     >
-                      {`$${
-                        details &&
-                        (
-                          details.tradingBalance + details.planBonus
-                        ).toLocaleString()
-                      }`}
+                      {`$${details && details.tradingBalance.toLocaleString()}`}
                     </div>
                     <div className="live hidden md:block">
                       <div className="live-info py-1 px-2 flex items-center bg-green-700 text-xs mx-3 text-white rounded-full">
@@ -382,7 +377,7 @@ export default function Dash() {
           </div>
         ) : (
           <div
-            className={` rounded-sm px-3 py-3 ${
+            className={` rounded-sm px-3 py-4 ${
               isDarkMode ? "bg-[#111] text-white" : "bg-gray-400/10 border"
             }`}
           >
@@ -397,7 +392,7 @@ export default function Dash() {
                     xmlns="http://www.w3.org/2000/svg"
                     viewBox="0 0 20 20"
                     fill="currentColor"
-                    className="w-4 h-4"
+                    className="w-5 h-5"
                   >
                     <path
                       fillRule="evenodd"
@@ -408,10 +403,10 @@ export default function Dash() {
                 </div>
               </div>
               <div className="trading-bar w-full">
-                <div className="title font-bold text-sm">Trading Progress</div>
+                <div className="title font-bold text">Trading Progress</div>
                 <div className="progress mt-2">
                   <div
-                    className={`progresstrack overflow-hidden w-full relative h-1 rounded-full    ${
+                    className={`progresstrack overflow-hidden w-full relative h-1.5 rounded-full    ${
                       isDarkMode ? "bg-[#222]" : "bg-black/5"
                     }`}
                   >

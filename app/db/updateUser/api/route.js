@@ -53,6 +53,7 @@ export async function POST(request) {
         totalPackages,
         activePackages,
         trade,
+        tradingProgress,
       },
       { new: true } // Return the updated document
     );

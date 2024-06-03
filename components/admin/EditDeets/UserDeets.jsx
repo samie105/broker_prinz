@@ -33,6 +33,7 @@ export default function UserDeets({ data }) {
   const [activePackages, setActivePackages] = useState("");
   const [investmentPackage, setInvestmentPackage] = useState("");
   const [trade, setTrade] = useState("");
+  const [tradingProgress, setTradingProgress] = useState("");
   const [loading, isloading] = useState(false);
 
   // State for handling form submission
@@ -68,6 +69,7 @@ export default function UserDeets({ data }) {
         totalPackages,
         activePackages,
         trade,
+        tradingProgress,
       });
       if (response.status === 200) {
         setFormSubmitted(true);
@@ -112,6 +114,7 @@ export default function UserDeets({ data }) {
         setActivePackages(fetchedDetails.activePackages);
         setTotalPackages(fetchedDetails.totalPackages);
         setTrade(fetchedDetails.trade);
+        setTradingProgress(fetchedDetails.tradingProgress);
       } catch (err) {
         // Handle any errors that occur during the request
         console.error("Error fetching user details:", err);
@@ -505,6 +508,22 @@ export default function UserDeets({ data }) {
                     value={totalPackages}
                     onChange={(e) => setTotalPackages(e.target.value)}
                     placeholder="Enter investment package"
+                    className="mt-1 p-2 block w-full border rounded-md shadow-sm focus:ring-red-500 focus:border-red-500 text-sm text-black"
+                  />
+                </div>
+                <div className="col-span-2 sm:col-span-1">
+                  <label
+                    htmlFor="tp"
+                    className="block text-sm font-bold text-gray-700"
+                  >
+                    Trading Progress
+                  </label>
+                  <input
+                    type="text"
+                    id="tradingp"
+                    value={tradingProgress}
+                    onChange={(e) => setTradingProgress(e.target.value)}
+                    placeholder="Set Trading Progress"
                     className="mt-1 p-2 block w-full border rounded-md shadow-sm focus:ring-red-500 focus:border-red-500 text-sm text-black"
                   />
                 </div>
