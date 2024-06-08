@@ -291,7 +291,7 @@ export default function Dash() {
                       </svg>
                     </div>
                   </div>
-                  <div className="flex flex-col md:flex-row md:items-center text-xs ml-2">
+                  <div className="flex flex-col md:flex-row md:items-center text-lg ml-2">
                     <div className="flex items-center">
                       <p
                         className={`${
@@ -308,7 +308,7 @@ export default function Dash() {
                     </div>
 
                     <div
-                      className={`mt-2 md:mt-0 bg-gay-200 rounded-lg md:ml-2 text-lg  text-left  ${
+                      className={`mt-2 md:mt-0 bg-gay-200 rounded-lg md:ml-2 text-2xl  text-left  ${
                         isDarkMode ? "text-white" : "text-black"
                       }`}
                     >
