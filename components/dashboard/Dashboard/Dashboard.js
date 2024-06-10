@@ -264,7 +264,7 @@ export default function Dash() {
             </div>
           ) : (
             <div
-              className={` sticky rounded-lg px-2 py-4  /shadow-[0px_0px_17px_3px_#00000010] ${
+              className={` sticky rounded-lg px-2 py-7  /shadow-[0px_0px_17px_3px_#00000010] ${
                 isDarkMode ? "bg-[#111] text-white" : "bg-gray-400/10 border"
               }`}
             >
@@ -291,7 +291,7 @@ export default function Dash() {
                       </svg>
                     </div>
                   </div>
-                  <div className="flex flex-col md:flex-row md:items-center text-lg ml-2">
+                  <div className="flex flex-col md:flex-row md:items-center  ml-2">
                     <div className="flex items-center">
                       <p
                         className={`${
