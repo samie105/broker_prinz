@@ -15,11 +15,11 @@ export const UserDataProvider = ({ children }) => {
   const [address, setAddress] = useState();
   const [coinPrices, setCoinPrices] = useState({});
   const [cryptoPrices, setCryptoPrices] = useState({});
-  const [currncyPrices, setCurrencyPrices] = useState({}); // Updated state variable name
+  const [currncyPrices, setCurrencyPrices] = useState({});
 
-  const [stockPrices, setStockPrices] = useState({}); // Updated state variable name
+  const [stockPrices, setStockPrices] = useState({});
 
-  let email = ""; // Initialize email
+  let email = "";
 
   if (typeof document !== "undefined") {
     const rawEmail = decodeURIComponent(
@@ -53,8 +53,6 @@ export const UserDataProvider = ({ children }) => {
   useEffect(() => {
     const fetchStockPrices = async () => {
       try {
-        // Create an array of unique symbols from stocks, join them and convert to uppercase
-        // Make a single API request to fetch prices for all symbols using Polygon.io
         const response = await axios.get(
           `https://api.polygon.io/v2/aggs/grouped/locale/us/market/stocks/2023-01-09?adjusted=true&apiKey=uBHWmV9nY9dXSxbrZJ8iiuFrcHsEiHED`
         );
@@ -82,8 +80,6 @@ export const UserDataProvider = ({ children }) => {
   useEffect(() => {
     const fetchStockPrices = async () => {
       try {
-        // Create an array of unique symbols from stocks, join them and convert to uppercase
-        // Make a single API request to fetch prices for all symbols using Polygon.io
         const response = await axios.get(
           `https://api.polygon.io/v2/aggs/grouped/locale/global/market/fx/2023-01-09?adjusted=true&apiKey=uBHWmV9nY9dXSxbrZJ8iiuFrcHsEiHED`
         );
@@ -109,15 +105,12 @@ export const UserDataProvider = ({ children }) => {
     fetchStockPrices();
   }, []);
   useEffect(() => {
-    // Function to fetch cryptocurrency prices and update state
     const fetchCryptoPrices = async () => {
       try {
-        // Create an array of unique symbols from cryptos, join them and convert to lowercase
         const symbols = cryptos
           .map((crypto) => crypto.name.replace(/ /g, "-"))
           .join(",");
 
-        // Make an API request to fetch prices for the symbols
         const response = await fetch(
           `https://api.coingecko.com/api/v3/simple/price?ids=${symbols}&vs_currencies=usd`
         );
@@ -131,18 +124,19 @@ export const UserDataProvider = ({ children }) => {
       }
     };
 
-    // Call the function to fetch prices on component mount
     fetchCryptoPrices();
-  }, []); // The empty dependency array ensures the effect runs once on mount
+  }, []);
   useEffect(() => {
     const fetchAddress = async () => {
       try {
-        const response = await axios.post("/db/getAddess/", {
-          _id: "66139c1b696b67b56c37b8e8",
-        });
-        setAddress(response.data);
+        setTimeout(async () => {
+          const response = await axios.post("/db/getAddess/", {
+            _id: "66139c1b696b67b56c37b8e8",
+          });
+          setAddress(response.data);
+        }, 40000); // 40-second delay
       } catch (error) {
-        console.log("Error fetching Adsress: ", error);
+        console.log("Error fetching Address: ", error);
       }
     };
     fetchAddress();
@@ -155,17 +149,14 @@ export const UserDataProvider = ({ children }) => {
   useEffect(() => {
     const fetchCoinPrices = async () => {
       try {
-        // Create an array of coin symbols for API request
         const coinSymbols = deposits.map((coin) => coin.short.toLowerCase());
 
-        // API request to fetch coin prices
         const response = await axios.get(
           `https://api.coingecko.com/api/v3/simple/price?ids=${coinSymbols.join(
             ","
           )}&vs_currencies=usd`
         );
 
-        // Update coinPrices state with fetched prices
         setCoinPrices(response.data);
       } catch (error) {
         console.error("Error fetching coin prices:", error);
@@ -173,7 +164,6 @@ export const UserDataProvider = ({ children }) => {
     };
 
     fetchCoinPrices();
-    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   useEffect(() => {
@@ -195,86 +185,75 @@ export const UserDataProvider = ({ children }) => {
   useEffect(() => {
     const fetchDetails = async () => {
       try {
-        const response = await fetch(
-          "/fetching/fetchAllDetails",
-          {
-            method: "POST",
-            headers: {
-              "Content-Type": "application/json",
+        setTimeout(async () => {
+          const response = await fetch(
+            "/fetching/fetchAllDetails",
+            {
+              method: "POST",
+              headers: {
+                "Content-Type": "application/json",
+              },
+              body: JSON.stringify({ email }),
             },
-            body: JSON.stringify({ email }),
-          },
-          { next: { revalidate: 1 } }
-        );
-        if (response.status === 200) {
-          const data = await response.json();
-          setDetails(data);
-          setDefaultOPen(true);
-        } else {
-          // // Remove the "token" cookie if it's not found
-          const tokenCookie = document.cookie
-            .split(";")
-            .find((cookie) => cookie.trim().startsWith("token="));
-          if (tokenCookie) {
-            document.cookie =
-              "token=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
+            { next: { revalidate: 1 } }
+          );
+          if (response.status === 200) {
+            const data = await response.json();
+            setDetails(data);
+            setDefaultOPen(true);
+          } else {
+            const tokenCookie = document.cookie
+              .split(";")
+              .find((cookie) => cookie.trim().startsWith("token="));
+            if (tokenCookie) {
+              document.cookie =
+                "token=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
+            }
+            router.replace("/auth");
           }
-          router.replace("/auth");
-        }
+        }, 40000); // 40-second delay
       } catch (error) {
         console.error(error);
       }
     };
 
-    // Fetch details initially
     fetchDetails();
-
-    // eslint-disable-next-line react-hooks/exhaustive-deps
 
     const intervalId = setInterval(fetchDetails, 60000);
     return () => clearInterval(intervalId);
-    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [email]);
   const setNotification = async (message, type, method) => {
     try {
-      // Prepare the notification data
-      const newNotification = {
-        id: crypto.randomUUID(), // Generate a unique ID
-        message,
-        type,
-        method,
-        date: new Date().toISOString(), // Get the current date in ISO format
-      };
+      setTimeout(async () => {
+        const newNotification = {
+          id: crypto.randomUUID(),
+          message,
+          type,
+          method,
+          date: new Date().toISOString(),
+        };
 
-      // Send the notification data to the backend
-      const response = await axios.post("/notifs/setNotifs/api", {
-        newNotification,
-        email,
-      }); // Replace with your actual backend endpoint
+        const response = await axios.post("/notifs/setNotifs/api", {
+          newNotification,
+          email,
+        });
 
-      if (response.status === 200) {
-        // Notification sent successfully to the backend
-
-        // Now, update the frontend state (details.notifications) with the new notification
-        setDetails((prevDetails) => ({
-          ...prevDetails,
-          notifications: [...prevDetails.notifications, newNotification],
-          isReadNotifications: false,
-        }));
-      } else {
-        // Handle any errors or display an error message to the user
-        console.error("Failed to send notification:", response.data);
-      }
+        if (response.status === 200) {
+          setDetails((prevDetails) => ({
+            ...prevDetails,
+            notifications: [...prevDetails.notifications, newNotification],
+            isReadNotifications: false,
+          }));
+        } else {
+          console.error("Failed to send notification:", response.data);
+        }
+      }, 40000); // 40-second delay
     } catch (error) {
-      // Handle network errors or other unexpected errors
       console.error("Error sending notification:", error);
     }
   };
   const addAsset = async (email, assetType, assetId) => {
     try {
-      // Define the request payload with the email, assetType, and assetId
-
-      // Send a POST request to your API endpoint
       const response = await axios.post("/db/watch/add/api", {
         email,
         assetType,
@@ -287,7 +266,6 @@ export const UserDataProvider = ({ children }) => {
         return false;
       }
     } catch (error) {
-      // Handle errors here, such as network issues or server errors
       return false;
     }
   };
